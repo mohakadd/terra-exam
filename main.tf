@@ -37,3 +37,7 @@ module "ebs" {
   # Important : la zone doit correspondre à celle de l'EC2
   # Si l'EC2 est dans module.networking.public_subnets_ids[0] => c'est en AZ[0].
 }
+
+output "ec2_public_ip" {
+  value = module.ec2.ec2_public_ip
+}
